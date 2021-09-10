@@ -1,6 +1,8 @@
 ﻿using System;
+using InterfaceAndInheritance.DomainModel;
+using InterfaceAndInheritance.DomainServices;
 
-namespace InterfaceAndInheritance
+namespace InterfaceAndInheritance.ApplicationService
 {
     class SubscriptionService
     {

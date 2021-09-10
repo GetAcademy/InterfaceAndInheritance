@@ -1,6 +1,6 @@
-﻿namespace InterfaceAndInheritance
+﻿namespace InterfaceAndInheritance.DomainModel
 {
-    class Email
+    class Email 
     {
         public string To { get; }
         public string From { get; }
@@ -13,6 +13,11 @@
             From = from;
             Subject = subject;
             Text = text;
+        }
+
+        public override string ToString()
+        {
+            return $"{To},{From},{Subject},{Text}";
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using InterfaceAndInheritance.ApplicationService;
+using InterfaceAndInheritance.Infrastructur;
 
 namespace InterfaceAndInheritance
 {
@@ -6,7 +8,12 @@ namespace InterfaceAndInheritance
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var emailService = new EmailService();
+            var newsletterRepository = new NewsletterRepository();
+            var subscriptionService = new SubscriptionService(emailService, newsletterRepository);
+            string code = "jh";
+            subscriptionService.Subscribe("terje@getacademy.no");
+            subscriptionService.Verify("terje@getacademy.no", code);
         }
     }
 }

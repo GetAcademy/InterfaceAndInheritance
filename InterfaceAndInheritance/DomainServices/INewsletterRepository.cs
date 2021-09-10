@@ -1,4 +1,6 @@
-﻿namespace InterfaceAndInheritance
+﻿using InterfaceAndInheritance.DomainModel;
+
+namespace InterfaceAndInheritance.DomainServices
 {
     interface INewsletterRepository
     {
