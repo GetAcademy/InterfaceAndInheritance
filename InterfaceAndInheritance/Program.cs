@@ -1,6 +1,7 @@
 ﻿using System;
 using InterfaceAndInheritance.ApplicationService;
 using InterfaceAndInheritance.Infrastructur;
+using ProjectB;
 
 namespace InterfaceAndInheritance
 {
@@ -14,6 +15,8 @@ namespace InterfaceAndInheritance
             string code = "jh";
             subscriptionService.Subscribe("terje@getacademy.no");
             subscriptionService.Verify("terje@getacademy.no", code);
+
+            var classB = new ClassB();
         }
     }
 }

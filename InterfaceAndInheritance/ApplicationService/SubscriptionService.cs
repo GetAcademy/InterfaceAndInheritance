@@ -23,9 +23,9 @@ namespace InterfaceAndInheritance.ApplicationService
                 "newsletter@getacademy.no", 
                 "Bekreft ditt nyhetsbrev", 
                 $"Koden er {code}");
-            _emailService.Send(email);
             var subscription = new Subscription(emailAddress, code);
             _newsletterRepository.Save(subscription);
+            _emailService.Send(email);
         }
 
         public bool Verify(string emailAddress, string code)
